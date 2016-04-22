@@ -1,0 +1,17 @@
+<ion-view view-title="Films" id="viewFilms">
+  <ion-content class="padding">
+
+    <div class="list card" ng-repeat="film in films | orderBy:'id'">
+      <div class="item item-avatar">
+        <i class="icon ion-film-marker"></i>
+        <h2>{{film.title}}(Episode {{film.episode_id}})</h2>
+        <p>{{film.release_date}}</p>
+      </div>
+      <div class="item item-body">
+        <p>Director: {{film.director}}</p>
+        <p>Producer: {{film.producer}}</p>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

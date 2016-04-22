@@ -1,0 +1,17 @@
+<ion-view view-title="People" id="viewPeople">
+  <ion-content class="padding">
+
+    <div class="list list-inset">
+        <a href="#/app/person/{{person.id}}" class="item" ng-repeat="person in people">
+            {{person.name}}
+        </a>
+    </div>
+
+    <ion-infinite-scroll
+      ng-if="moreDataCanBeLoaded()"
+      on-infinite="loadMore()"
+      distance="1%">
+    </ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>

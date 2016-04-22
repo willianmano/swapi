@@ -1,0 +1,22 @@
+<ion-view view-title="Person" id="viewPerson">
+  <ion-content class="padding">
+
+    <div class="card">
+      <h2>{{person.name}}</h2>
+      <div class="item">
+        <p>Birth year: {{person.birth_year}}</p>
+        <p>Mass: {{person.mass}}</p>
+        <p>Skin color: {{person.skin_color}}</p>
+        <p>Eye color{{person.eye_color}}</p>
+      </div>
+    </div>
+
+    <div class="list card">
+      <h2>Starred films</h2>
+      <a href="{{film.url}}" class="item item-icon-left" ng-repeat="film in person.films | orderBy:'id'">
+        <i class="icon ion-film-marker"></i>
+        Film {{film.id}}
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
