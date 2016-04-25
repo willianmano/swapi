@@ -59,6 +59,15 @@ angular.module('swapi', ['ionic', 'swapi.controllers'])
       }
     }
   })
+  .state('app.singleplanet', {
+    url: '/planets/:id',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/singleplanet.html',
+        controller: 'singlePlanetCtrl'
+      }
+    }
+  })
 
   //Films
   .state('app.films', {
