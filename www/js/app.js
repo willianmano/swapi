@@ -68,6 +68,25 @@ angular.module('swapi', ['ionic', 'swapi.controllers'])
       }
     }
   })
+  //Species
+  .state('app.species', {
+    url: '/species',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/species.html',
+        controller: 'SpecieCtrl'
+      }
+    }
+  })
+  .state('app.singlespecie', {
+    url: '/specie/:id',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/singlespecies.html',
+        controller: 'singleSpecieCtrl'
+      }
+    }
+  })
 
   //Films
   .state('app.films', {

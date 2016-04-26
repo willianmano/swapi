@@ -1,0 +1,23 @@
+<ion-view view-title="Species" id="viewSpecie">
+  <ion-content class="padding">
+
+    <div class="card">
+      <h2>{{specie.name}}</h2>
+      <div class="item">
+        <p>Classification: {{specie.classification}}</p>
+        <p>Designation: {{specie.designation}}</p>
+        <p>Skin color: {{specie.skin_colors}}</p>
+        <p>Eye color: {{specie.eye_colors}}</p>
+        <p>Language: {{specie.language}}</p>
+      </div>
+    </div>
+
+    <div class="list card">
+      <h2>Films</h2>
+      <a href="{{film.url}}" class="item item-icon-left" ng-repeat="film in specie.films | orderBy:'id'">
+        <i class="icon ion-film-marker"></i>
+        Film {{film.id}}
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,1 +1,17 @@
-<h1>Species</h1>
+<ion-view view-title="Species" id="viewSpecies">
+  <ion-content class="padding">
+
+    <div class="list list-inset">
+        <a href="#/app/specie/{{specie.id}}" class="item" ng-repeat="specie in species">
+            {{specie.name}}
+        </a>
+    </div>
+
+    <ion-infinite-scroll
+      ng-if="moreSpeciesCanBeLoaded()"
+      on-infinite="loadMoreSpecies()"
+      distance="1%">
+    </ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>
