@@ -1,1 +1,18 @@
 <h1>Planets</h1>
+<ion-view view-title="Planets" id="viewPlanet">
+  <ion-content class="padding">
+
+    <div class="list list-inset">
+        <a href="#/app/planets/{{planet.id}}" class="item" ng-repeat="planet in planets">
+            {{planet.name}}
+        </a>
+    </div>
+
+    <ion-infinite-scroll
+      ng-if="morePlanetCanBeLoaded()"
+      on-infinite="loadMorePlanets()"
+      distance="1%">
+    </ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>

@@ -49,6 +49,46 @@ angular.module('swapi', ['ionic', 'swapi.controllers'])
       }
     }
   })
+  // Planets
+  .state('app.planets', {
+    url: '/planets',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/planets.html',
+        controller: 'PlanetsCtrl'
+      }
+    }
+  })
+  .state('app.singleplanet', {
+    url: '/planets/:id',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/singleplanet.html',
+        controller: 'singlePlanetCtrl'
+      }
+    }
+  })
+  //Species
+  .state('app.species', {
+    url: '/species',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/species.html',
+        controller: 'SpecieCtrl'
+      }
+    }
+  })
+  .state('app.singlespecie', {
+    url: '/specie/:id',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/singlespecies.html',
+        controller: 'singleSpecieCtrl'
+      }
+    }
+  })
+
+  //Films
   .state('app.films', {
     url: '/films',
     views: {
